@@ -52,7 +52,9 @@ nav {
   justify-content: center;
   z-index: 1000;
 }
+.main-background{
 
+}
 
 
 /* scrollMotion css */
@@ -65,11 +67,30 @@ nav {
 } */
 
 .main-scrolldiv{
-  background: black;
+ 
   color: white;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  /* justify-content: center;
+  background-image: url('./assets/fluidBackground.png'); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;  */
   /* display: flex;
   justify-content: center;
   align-items: center; */
+  background: black;
+}
+.home-back{
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  background-image: url('./assets/homeBackground.png'); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 .home-text{
   font-family: SF Pro Display;
@@ -158,9 +179,7 @@ margin-left: 110px;
 *{
   margin: 0%;
 }
-.main-background{
-  background: rgba(1, 1, 1, 1);
-}
+
 .home-div{
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
   /* background: black; */
@@ -358,70 +377,6 @@ margin-top: 20px;
 border-left: none;
 border-top: none;
    }
-
-/* 
-
-   .logo {
-  
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40%; 
-    z-index: 10; 
-}
-
-.container,
-.container-2 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-}
-
-.container {
-    background: wheat;
-}
-
-.container-2 {
-    background: blue;
-    height: 100vh; 
-} */
-
-
-
-
-
-/* 
-nav a {
-  margin: 0 15px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #333;
-}
-
-.section {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; 
-  transition: opacity 0.5s ease-in-out;
-}
-
-.section:nth-child(even) {
-  background-color: #f0f0f0;
-}
-
-.section:nth-child(odd) {
-  background-color: #e0e0e0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-} */
 
 
       /* Areas Carousel   */
@@ -631,7 +586,7 @@ margin-top: 40px;
 }
 
 .main-scrolldiv{
-  background: black;
+  /* background: black; */
   color: white;
   /* display: flex;
   justify-content: center;
@@ -700,10 +655,17 @@ margin-left: 110px;
   top: -75px;
   width: 50%;
 }
+.reservation-image{
+  width: 90%;
+}
+.event-right-image
+{
+  width: 96%;
+}
 .event-right{
   position: absolute;
   left: 505px;
-  top: -309px;
+  top: -227px;
   width: 50%;
 }
 .todo{

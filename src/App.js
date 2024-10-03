@@ -1,6 +1,5 @@
 
 import Waitlist from "./Components/Waitlist";
-import OurFeatures from "./Components/OurFeatures";
 import Areas from "./Components/Areas";
 import Faq from "./Components/Faq";
 import ScrollMotion from "./Components/ScrollMotion";

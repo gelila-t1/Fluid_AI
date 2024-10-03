@@ -51,6 +51,8 @@ const Areas = () => {
         setCurrentIndex(index);
     };
     return (
+        <div style={{ background: 'black'}}>
+            <p className='areas-header'>Fluid AI was born out of a desire to<br/> simplify and streamline modern life</p>
         <div className="areas-carousel"  
         style={{ backgroundImage: `url(${slides[currentIndex].image})` }}>
             <div 
@@ -70,6 +72,7 @@ const Areas = () => {
                     ></span>
                 ))}
             </div>
+        </div>
         </div>
     );
 };

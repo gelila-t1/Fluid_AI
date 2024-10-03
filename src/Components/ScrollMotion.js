@@ -24,7 +24,7 @@ const ScrollMotion = () => {
             <div className="main-scrolldiv">
             <ScrollPage>
                     <Animator animation={batch(Sticky(), Move(0, -70), Zoom(0.1, 1.2))}>
-                        <span style={{ fontSize: "50px" }}><img src={Logo} /></span>
+                        <span style={{ fontSize: "50px" }}><img src={Logo} className="main-logo"/></span>
                     </Animator>
                 </ScrollPage>
                 
@@ -35,12 +35,12 @@ const ScrollMotion = () => {
                     <Animator animation={FadeUp}>
                     <Animator animation={MoveIn(-1000, 0)}>
                         <div className="card-one-div">
-                               <div><img src={cardOne}/></div>
+                               <div className="card-first"><img src={cardOne} className="card-one"/></div>
                                <div className="upcoming-events"> 
-                               <img src={Event}/>
+                               <img src={Event} className="upcoming-image"/>
                                </div>
                                <div className="ticket-card">
-                               <img src={ticketCard}/>
+                               <img src={ticketCard} className="ticketcard-image"/>
                                </div>
                                 </div>
                                 </Animator>
@@ -49,12 +49,12 @@ const ScrollMotion = () => {
                         <span style={{ fontSize: "40px" }}><button className="Join-waitlist">Join Waitlist</button></span>
                         </div>
                         <Animator animation={Move(1000, 0)}>
-                            <div className="todo"><img src={toDo}/></div>
+                            <div className="todo"><img src={toDo} className="todo-image"/></div>
                             <div className="reservation">
-                            <img src={Reservation}/>
+                            <img src={Reservation} className="reservation-image"/>
                             </div>
                             <div className="event-right">
-                                <img src={Event}/></div></Animator>
+                                <img src={Event} className="event-right-image"/></div></Animator>
                     </Animator>
                 
      

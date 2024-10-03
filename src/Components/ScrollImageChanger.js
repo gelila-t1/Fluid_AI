@@ -33,8 +33,15 @@ export default function ScrollImageChanger() {
   }, [dataSource]);
 
   return (
-   <div>
+   <div   style={{background: 'black', zIndex: 30}}>
+     <div className='our-features'>
+      Our Features
+      </div>
+      <div className='feature-heading'>Fluid AI was born out of a <br/>
+        desire to simplify and <br/> streamline modern life  
+        </div>
     <div className="main-changer">
+      
      <div>
     <p className='f-heading'>
     Fluid AI: Simplify, Organize, <br/> and Achieve More
@@ -47,7 +54,7 @@ export default function ScrollImageChanger() {
        lists into one seamless platform.</p>
     </div>
     <div
-      style={{ height: '200vh', background: 'black' }}
+     className="scroll-image-div"
     >
       <div
         style={{

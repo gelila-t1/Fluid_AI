@@ -16,7 +16,7 @@
 .navbar-links a {
   color: rgba(255, 255, 255, 1); 
   font-family: SF Pro Display;
-font-size: 16px;
+font-size: 19px;
 font-weight: 500;
 line-height: 22px;
 letter-spacing: -0.40799999237060547px;
@@ -53,29 +53,110 @@ nav {
   z-index: 1000;
 }
 
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* Adjust based on navbar height */
-    right: 0;
-    background-color: #333;
-    width: 100%;
-  }
 
-  .navbar-links.open {
-    display: flex;
-  }
 
-  .navbar-toggle {
-    display: flex;
-  }
+/* scrollMotion css */
+/* .logo {
+  position: absolute; 
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%; 
+} */
+
+.main-scrolldiv{
+  background: black;
+  color: white;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
+.home-text{
+  font-family: SF Pro Display;
+font-size: 60px;
+font-weight: 400;
+line-height: 65px;
+letter-spacing: -0.02em;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+display: flex;
+padding-top: 70px;
+}
+
+.Join-waitlist{
+  width: 167px;
+height: 52px;
+padding: 18px 0px 18px 0px;
+border: none;
+border-radius: 52px;
+opacity: 0px;
+background: rgba(255, 255, 255, 1);
+box-shadow: 0px 5px 30px 0px rgba(255, 255, 255, 0.61);
+  color: black;
+margin-left: 110px;
+ }
+.right{
+  position: fixed;
+  right: 143%;
+  top: 17%;
+}
+.card-one-div{
+ width: 70%;
+    position: absolute;
+    left: -220px;
+    top: -100px;
+}
+.center-text{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+.upcoming-events{
+  width:100%;
+  position: absolute;
+  left: -300px;
+  top: 226px;
+}
+.ticket-card{
+  position: absolute;
+  right: -193px;
+  top: 400px;
+  width: 100%;
+}
+.reservation{
+  position: absolute;
+  left: 362px;
+  top: -75px;
+  width: 50%;
+}
+.event-right{
+  position: absolute;
+  left: 505px;
+  top: -309px;
+  width: 50%;
+}
+.todo{
+  position: absolute;
+  left: 375px;
+  top: -402px;
+  width: 50%;
+}
+.main-changer{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 50px;
+}
+.changing-image{
+  width: 75%;
+}
+
 
 *{
   margin: 0%;
-
 }
 .main-background{
   background: rgba(1, 1, 1, 1);
@@ -147,7 +228,7 @@ color: rgba(255, 255, 255, 1);
 /* features css */
 .feature-heading{
 font-family: SF Pro Display;
-font-size: 80px;
+font-size: 67px;
 font-weight: 400;
 line-height: 80px;
 letter-spacing: -0.02em;
@@ -164,7 +245,7 @@ font-weight: 500;
 line-height: 23.4px;
 letter-spacing: -0.40799999237060547px;
 text-align: center;
-color: rgba(255, 255, 255, 1);
+color: rgba(255, 255, 255, 0.5);
 }
 .main-features{
   display: flex;
@@ -277,7 +358,7 @@ margin-top: 20px;
 border-left: none;
 border-top: none;
    }
-  
+
 /* 
 
    .logo {
@@ -343,6 +424,7 @@ img {
 } */
 
 
+      /* Areas Carousel   */
 
 .areas-carousel {
   position: relative;
@@ -359,7 +441,16 @@ img {
   background-position: center; 
   background-repeat: no-repeat; 
 }
-
+.areas-header{
+  font-family: SF Pro Display;
+font-size: 46px;
+font-weight: 400;
+line-height: 61.6px;
+letter-spacing: -0.02em;
+text-align: left;
+color: rgba(255, 255, 255, 1);
+padding: 80px 40px 50px 40px;
+}
 .carousel-content {
   display: flex;
   transition: transform 0.5s ease-in-out;
@@ -464,6 +555,7 @@ color: rgba(255, 255, 255, 1);
   background: none;
 }
 
+
                               /* FAQ Accordion */
                               
 .faq-div{
@@ -524,36 +616,20 @@ line-height: 23.4px;
 letter-spacing: -0.40799999237060547px;
 text-align: left;
 color: rgba(255, 255, 255, 1);
-margin-top: 20px;
+margin-top: 40px;
 }
 
 
-/* scrollEffect css */
+
+/* scrollMotion css */
 .logo {
-  position: absolute; /* Change to absolute */
-  top: 20px; /* Adjust position within the container */
+  position: absolute; 
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 20%; /* Adjust width as needed */
+  width: 20%; 
 }
 
-.container, .container-2 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-}
-
-.container {
-  background: wheat;
-}
-
-.container-2 {
-  background: blue;
-  position: relative; /* Ensure this container is positioned for absolute logo */
-}
 .main-scrolldiv{
   background: black;
   color: white;
@@ -561,6 +637,11 @@ margin-top: 20px;
   justify-content: center;
   align-items: center; */
 }
+.scroll-image-div{
+  height: 200vh;
+  background-color: #000000;
+}
+
 .home-text{
   font-family: SF Pro Display;
 font-size: 60px;
@@ -644,7 +725,77 @@ margin-left: 110px;
   width: 75%;
 }
 
-
+@media (max-width: 768px) {
+  .main-changer {
+    flex-direction: column-reverse;
+  }
+  .scroll-image-div{
+    height: 80vh;
+    background-color: #000000;
+  }
+  .changing-image {
+    width: 100%;
+}
+.feature-heading {
+  font-family: SF Pro Display;
+  font-size: 35px;
+  line-height: 35px;
+}
+.reservation-image{
+  width: 100%;
+}
+.reservation {
+  left: 111px;
+  top: 123px;
+}
+.home-text {
+  font-size: 38px;
+  line-height: 44px;
+  padding-top: 10px;
+  width: 195px;
+}
+.ticketcard-image{
+  width: 100%;
+}
+.ticket-card{
+  right: -167px;
+  top: 376px;
+}
+.Join-waitlist {
+  width: 130px;
+  height: 52px;
+  margin-left: 31px;
+}
+.card-one{
+  width: 50%;
+}
+.card-first {
+  position: absolute;
+  right: -199px;
+  top: -40px;
+}
+.upcoming-image{
+  width: 100%;
+}
+.upcoming-events{
+  right: -199px;
+  top: -40px;
+}
+.todo-image{
+  width: 99%;
+}
+.todo {
+  left: 183px;
+  top: -240px;
+}
+.event-right-image{
+  width: 100%;
+}
+.event-right{
+  left: 196px;
+  top: -171px;
+}
+}
           /* Footer css */
 
 .footer-logo{
@@ -683,3 +834,104 @@ letter-spacing: -0.40799999237060547px;
 margin-top: 20px;
 color: rgba(255, 255, 255, 0.5);
 }
+@media (max-width: 768px) {
+  .footer-div {
+    flex-direction: column;
+    gap: 39px;
+  }
+  .footer-links {
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-weight: 500;
+    font-weight: 500;
+    line-height: 37px;
+    letter-spacing: -0.40799999237060547px;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: row;
+    gap: 116px;
+}
+}
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    right: 0;
+    background-color: #333;
+    width: 100%;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+
+  .main-logo{
+    width: 90%;
+  }
+  .logo {
+  position: absolute; 
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%; 
+}
+}
+@media (max-width: 768px) {
+
+  .faq-div{
+   flex-direction: column; 
+  }   
+   .faq-heading{
+    font-size: 43px;
+    line-height: 47.6px;
+   }
+   .faq-accordion {
+     width: 286px;
+     margin-left: 14px;
+     padding: 0px;
+    }
+   .signs {
+      left: 0px;
+    }
+   }
+   @media (max-width: 768px) {
+    .car-box{
+      width: 324px;
+    }
+    .areas-header{
+      font-size: 35px;
+      line-height: 47.6px;
+    }
+  }
+  @media (max-width: 768px) {
+    .wait-background{
+     flex-direction: column;
+    }
+    .join{
+     font-size: 44px;
+     line-height: 56px;
+     padding-left: 15px;
+    }
+    input {
+     width: 320px;
+     height: 28px;
+     margin-left: 15px;
+   }
+   .hand-image{
+     width: 90%;
+   }
+   .country-select{
+     margin-left: 15px;
+   }
+   .Join-button{
+     margin-left: 15px;
+   }
+    }

@@ -30,7 +30,7 @@ const Waitlist = () => {
     
      </div>
      <div>
-      <img src={hand}/>
+      <img src={hand} className='hand-image'/>
      </div>
     </div>
   )

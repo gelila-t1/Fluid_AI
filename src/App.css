@@ -1,38 +1,685 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem;
+  background-color: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-links {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Allow links to take available space */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-links a {
+  color: rgba(255, 255, 255, 1); 
+  font-family: SF Pro Display;
+font-size: 16px;
+font-weight: 500;
+line-height: 22px;
+letter-spacing: -0.40799999237060547px;
+
+  text-decoration: none;
+  padding: 0.5rem 1rem; /* Add padding for better click area */
+}
+
+.spacer {
+  flex-grow: 1; /* This will create the space between About and Services */
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* background: rgba(255, 255, 255, 0.8); */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    right: 0;
+    background-color: #333;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-links.open {
+    display: flex;
   }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+*{
+  margin: 0%;
+
+}
+.main-background{
+  background: rgba(1, 1, 1, 1);
+}
+.home-div{
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  /* background: black; */
+  /* background: rgba(1, 1, 1, 1); */
+  padding-top: 50px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(1, 1, 1, 1);
+  width: 100%;
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  background-image: url('./assets/fluidBackground.png'); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+.image-div{
+  width: 659.51px;
+  height: 142.77px;
+}
+.scroll-div{
+  width: 36px;
+  height: 36px;
+  margin-top: 190px;
+}
+.scroll-text{
+  font-family: SF Pro Display;
+font-size: 18px;
+font-weight: 500;
+line-height: 21.6px;
+letter-spacing: -0.01em;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+
+}
+.main-div{
+  /* border: 66.37px solid;
+  border-image-source: linear-gradient(101.15deg, #0082FF 20.23%, #0076BF 38.33%);
+  backdrop-filter: blur(106.44210815429688px); */
+  width: 100%;
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  background-image: url('./assets/homeBackground.png'); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: white;
+  /* opacity: 0.5; */
+  overflow: hidden;
+}
+/* .card{
+  color: white;
+} */
+
+/* features css */
+.feature-heading{
+font-family: SF Pro Display;
+font-size: 80px;
+font-weight: 400;
+line-height: 80px;
+letter-spacing: -0.02em;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+}
+.feature-div{
+  background: rgba(1, 1, 1, 1);
+}
+.our-features{
+  font-family: SF Pro Display;
+font-size: 18px;
+font-weight: 500;
+line-height: 23.4px;
+letter-spacing: -0.40799999237060547px;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+}
+.main-features{
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+  /* justify-content: center; */
+  align-items: center;
+  justify-content: left;
+gap: 70px;
+}
+.feature-two{
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;;
+ justify-content: right;
+  align-items: center;
+justify-items: center;
+justify-self: center;
+gap: 70px;
+}
+.feature-three{
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;;
+ justify-content: left;
+  align-items: center;
+justify-items: center;
+gap: 70px;
+}
+.f-heading{
+  font-family: SF Pro Display;
+font-size: 32px;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: -0.02em;
+text-align: left;
+/* margin-left: 70px; */
+color: rgba(255, 255, 255, 1);
+}
+.f-text{
+  font-family: SF Pro Display;
+font-size: 18px;
+font-weight: 500;
+line-height: 23.4px;
+letter-spacing: -0.02em;
+text-align: left;
+margin-top: 20px;
+/* margin-left: 70px; */
+color: rgba(255, 255, 255, 1);
+}
+.iphone{
+  height: 100vh;
+}
+
+           /* The waitlist  */
+
+ .wait-background{
+  width: 100%;
+  height: 100vh; 
+  background-image: url('./assets/waitlistBackground.png'); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center;
+  gap:70px;
+   }
+   .join{
+    font-family: SF Pro Display;
+font-size: 65px;
+font-weight: 400;
+line-height: 88px;
+letter-spacing: -0.02em;
+text-align: left;
+color: rgba(255, 255, 255, 1);
+   }
+   input{
+    width: 380px;
+height: 28px;
+gap: 0px;
+border-right: none;
+border-left: none;
+border-top: none;
+opacity: 0px;
+margin-top: 10px;
+background: none;
+   }
+   .Join-button{
+    width: 167px;
+height: 52px;
+padding: 18px 0px 18px 0px;
+border: none;
+border-radius: 52px;
+opacity: 0px;
+background: rgba(255, 255, 255, 1);
+box-shadow: 0px 5px 30px 0px rgba(255, 255, 255, 0.61);
+margin-top: 20px;
+    color: black;
+
+   }
+   .country-select{
+    background: none;
+    margin-top: 10px;
+    color: rgb(151 138 138);
+    width: 383px;
+    height: 28px;
+    border-right: none;
+border-left: none;
+border-top: none;
+   }
+  
+/* 
+
+   .logo {
+  
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%; 
+    z-index: 10; 
+}
+
+.container,
+.container-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    background: wheat;
+}
+
+.container-2 {
+    background: blue;
+    height: 100vh; 
+} */
+
+
+
+
+
+/* 
+nav a {
+  margin: 0 15px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.section:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+} */
+
+
+
+.areas-carousel {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  transition: background-image 1.5s ease-in-out; /* Slower transition (1.5 seconds) */
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center;
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transition: background-image 1.5s ease-in-out; /* Slower transition (1.5 seconds) */
+}
+
+.slide {
+  min-width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+
+.prev {
+  left: 275px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.next {
+  right: 275px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.carousel-content{
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+}
+.dots {
+  position: absolute;
+  bottom: 25px; /* Positioning from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px; /* Space between dots */
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #908989;
+  border-radius: 50%; /* Make dots circular */
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for color change */
+}
+
+.dot.active {
+  background-color: #ffffff; /* Color for the active dot */
+}
+.car-box{
+  background: linear-gradient(187.83deg, rgba(186, 186, 186, 0) 14.03%, rgba(186, 186, 186, 0.4) 94.25%);
+  width: 463px;
+  height: 470px;
+  border: 1px solid rgb(234, 229, 229);
+  border-top: none;
+  border-radius: 32px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px; 
+  z-index: 20;
+}
+.caption{
+  font-family: SF Pro Display;
+  width: 215px;
+font-size: 20px;
+font-weight: 500;
+line-height: 28.8px;
+letter-spacing: -0.02em;
+text-align: left;
+color: rgba(255, 255, 255, 1);
+padding: 20px;
+}
+.caption-two{
+  font-family: SF Pro Display;
+  margin-top: 230px;
+  padding-left: 20px;
+font-size: 45px;
+font-weight: 400;
+line-height: 61.6px;
+letter-spacing: -0.02em;
+text-align: left;
+color: rgba(255, 255, 255, 1);
+}
+.prev,.next{
+  border: none;
+  background: none;
+}
+
+                              /* FAQ Accordion */
+                              
+.faq-div{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 70px 40px;
+  justify-content: center;
+  background: rgba(1, 1, 1, 1);
+}
+   .faq-accordion {
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    width: 400px; /* Adjust width as needed */
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-header {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.signs{
+  position: relative;
+  left: 35px;
+}
+.faq-header:hover {
+  border-bottom: 1px solid #260384;
+}
+
+.faq-content {
+    padding: 10px;
+    color: white;
+}
+.faq-heading{
+  font-family: SF Pro Display;
+font-size: 56px;
+font-weight: 400;
+line-height: 61.6px;
+letter-spacing: -0.02em;
+text-align: left;
+color: rgba(255, 255, 255, 1);
+padding-top: 40px;
+}
+.faq-text{
+  font-family: SF Pro Display;
+font-size: 18px;
+font-weight: 500;
+line-height: 23.4px;
+letter-spacing: -0.40799999237060547px;
+text-align: left;
+color: rgba(255, 255, 255, 1);
+margin-top: 20px;
+}
+
+
+/* scrollEffect css */
+.logo {
+  position: absolute; /* Change to absolute */
+  top: 20px; /* Adjust position within the container */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%; /* Adjust width as needed */
+}
+
+.container, .container-2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  background: wheat;
+}
+
+.container-2 {
+  background: blue;
+  position: relative; /* Ensure this container is positioned for absolute logo */
+}
+.main-scrolldiv{
+  background: black;
+  color: white;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.home-text{
+  font-family: SF Pro Display;
+font-size: 60px;
+font-weight: 400;
+line-height: 65px;
+letter-spacing: -0.02em;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+display: flex;
+padding-top: 70px;
+}
+
+.Join-waitlist{
+  width: 167px;
+height: 52px;
+padding: 18px 0px 18px 0px;
+border: none;
+border-radius: 52px;
+opacity: 0px;
+background: rgba(255, 255, 255, 1);
+box-shadow: 0px 5px 30px 0px rgba(255, 255, 255, 0.61);
+  color: black;
+margin-left: 110px;
+ }
+.right{
+  position: fixed;
+  right: 143%;
+  top: 17%;
+}
+.card-one-div{
+ width: 70%;
+    position: absolute;
+    left: -220px;
+    top: -100px;
+}
+.center-text{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+.upcoming-events{
+  width:100%;
+  position: absolute;
+  left: -300px;
+  top: 226px;
+}
+.ticket-card{
+  position: absolute;
+  right: -193px;
+  top: 400px;
+  width: 100%;
+}
+.reservation{
+  position: absolute;
+  left: 362px;
+  top: -75px;
+  width: 50%;
+}
+.event-right{
+  position: absolute;
+  left: 505px;
+  top: -309px;
+  width: 50%;
+}
+.todo{
+  position: absolute;
+  left: 375px;
+  top: -402px;
+  width: 50%;
+}
+.main-changer{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 50px;
+}
+.changing-image{
+  width: 75%;
+}
+
+
+          /* Footer css */
+
+.footer-logo{
+  width: 200px;
+  height: auto;
+}          
+.footer-div{
+  display: flex;
+  flex-direction: row;
+  gap:500px;
+  background: rgba(0, 0, 0, 1);
+  padding: 58px 30px 120px 60px ;
+  color: white;
+}
+.footer-links{
+  font-family: SF Pro Display;
+font-size: 16px;
+font-weight: 500;
+font-weight: 500;
+line-height: 37px;
+letter-spacing: -0.40799999237060547px;
+color: rgba(255, 255, 255, 0.5);
+display: flex;
+flex-direction: row;
+gap: 149px;
+}
+.footer-link-two{
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer-year{
+  font-family: SF Pro Display;
+font-size: 16px;
+font-weight: 500;
+line-height: 22px;
+letter-spacing: -0.40799999237060547px;
+margin-top: 20px;
+color: rgba(255, 255, 255, 0.5);
 }

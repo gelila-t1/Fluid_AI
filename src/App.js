@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Waitlist from "./Components/Waitlist";
+import OurFeatures from "./Components/OurFeatures";
+import Areas from "./Components/Areas";
+import Faq from "./Components/Faq";
+import ScrollMotion from "./Components/ScrollMotion";
+import ScrollImageChanger from "./Components/ScrollImageChanger";
+import Footer from "./Components/Footer";
+import Navbar from "./Components/NavBar";
+import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+  <ScrollMotion/>
+
+  <div id="features">
+  <ScrollImageChanger />
+  </div>
+  
+  <div id="areas">
+  <Areas />
+  </div>
+ 
+  <div id="faq">
+  <Faq />
+  </div>
+ 
+   <div id="theWaitlist">
+   <Waitlist />
+   </div>
+
+   <Footer/>
+
     </div>
   );
 }

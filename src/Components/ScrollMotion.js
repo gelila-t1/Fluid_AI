@@ -30,7 +30,7 @@ const ScrollMotion = () => {
                 
             </div>
               
-              <div className="home-back" style={{ background: 'black'}}>
+              <div className="home-back">
               <ScrollPage>
                     <Animator animation={FadeUp}>
                     <Animator animation={MoveIn(-1000, 0)}>
